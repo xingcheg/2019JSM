@@ -1,0 +1,16 @@
+\begin{thebibliography}{}
+
+\bibitem[Besag and Higdon, 1999]{besag1999bayesian}
+Besag, J. and Higdon, D. (1999).
+\newblock Bayesian analysis of agricultural field experiments.
+\newblock {\em Journal of the Royal Statistical Society: Series B (Statistical
+  Methodology)}, 61(4):691--746.
+
+\bibitem[Dutta and Mondal, 2015]{dutt:mond:2015}
+Dutta, S. and Mondal, D. (2015).
+\newblock An h-likelihood method for spatial mixed linear models based on
+  intrinsic auto-regressions.
+\newblock {\em Journal of the Royal Statistical Society: Series B (Statistical
+  Methodology)}, 77(3):699--726.
+
+\end{thebibliography}
