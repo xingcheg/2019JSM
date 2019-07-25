@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.7.16)  24 JUL 2019 20:48
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.7.16)  24 JUL 2019 21:25
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1419,10 +1419,10 @@ LaTeX Font Warning: Size substitutions with differences
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 494.
  ) 
 Here is how much of TeX's memory you used:
- 20324 strings out of 493014
- 381499 string characters out of 6133351
- 449769 words of memory out of 5000000
- 23268 multiletter control sequences out of 15000+600000
+ 20327 strings out of 493014
+ 381577 string characters out of 6133351
+ 450789 words of memory out of 5000000
+ 23271 multiletter control sequences out of 15000+600000
  25394 words of font info for 86 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  56i,16n,57p,396b,645s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1443,7 +1443,7 @@ texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi8.pfb></usr/local/t
 exlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/te
 xlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texl
 ive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on jsm_2019_xingche.pdf (22 pages, 431205 bytes).
+Output written on jsm_2019_xingche.pdf (22 pages, 431514 bytes).
 PDF statistics:
  773 PDF objects out of 1000 (max. 8388607)
  690 compressed objects within 7 object streams
