@@ -170,8 +170,33 @@
 %\end{frame}
 
 
+
 \begin{frame}
-	\frametitle{Finlay-Wilkinson (FW) model}
+	\frametitle{The Genomes To Fields (G2F) Initiative}
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width = 0.65\textwidth]{g2f_demo.png}
+	\end{figure}	
+	copyright:	\url{https://www.genomes2fields.org}
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{Multi-Environment Field Trial Analysis for G2F Data}
+	\begin{itemize}
+	\item Initially, we focus on a subset of 24 \textbf{environments}.
+	\item We have \textbf{yield recorded for 10,971 field plots} with known \textbf{spatial locations}.
+	\item A total of \textbf{1,105 hybrids} are planted in approximately 10 plots on average.
+	\item Hybrid \textbf{genotypes at $\sim$1M genomic locations} are available.
+	\item To characterize environments, weather stations provide \textbf{time-indexed measurements for 10 weather variables}, and several \textbf{soil variables} are available.
+	\end{itemize}	
+\end{frame}
+
+
+
+
+\begin{frame}
+	\frametitle{Finlay-Wilkinson (FW) Model}
 	\begin{itemize}
 	\item FW model: 
 	$$y_{ijk} = \mu + g_i + h_j + b_i h_j + e_{ijk},$$
@@ -185,7 +210,7 @@
 
 
 \begin{frame}
-\frametitle{Finlay-Wilkinson (FW) model}
+\frametitle{Finlay-Wilkinson (FW) Model}
 This plot gives one example of the fitted FW model (using G2F data). Each line represents the linear relationship between grain yield and location effect for one genotype.
 	\begin{figure}[H]
 		\centering
@@ -197,8 +222,8 @@ This plot gives one example of the fitted FW model (using G2F data). Each line r
 
 
 \begin{frame}
-	\frametitle{Residuals of FW model for two fields}
-	\textbf{Problem:} the residuals are highly spatially correlated.
+	\frametitle{Residuals of FW Model for Two Fields}
+	\textbf{Problem:} the residuals are \textbf{highly spatially correlated}.
 	\begin{figure}[H]
 		\centering
 		\includegraphics[width = 0.91\textwidth]{resid_plot_2.pdf}
@@ -208,7 +233,7 @@ This plot gives one example of the fitted FW model (using G2F data). Each line r
 
 
 \begin{frame}
-	\frametitle{Hierarchical spatial Finlay-Wilkinson (SFW) model}
+	\frametitle{Hierarchical Spatial Finlay-Wilkinson (SFW) Model}
 	\begin{itemize}
 	\item Data model:
 \begin{equation*}
@@ -225,11 +250,11 @@ This plot gives one example of the fitted FW model (using G2F data). Each line r
 
 
 \begin{frame}
-	\frametitle{Prior distributions for spatial effects}
+	\frametitle{Intrinsic Autoregression Model for Spatial Effects}
 	\begin{itemize}
 	\item A popular model for fertility adjustment in agricultural field trials is the \textbf{first order intrinsic autoregression} \citep{besag1999bayesian,dutt:mond:2015}.
 
-\item First order Intrinsic Autoregressive prior (Besag 1995, Besag 1999):
+\item First order Intrinsic Autoregressive prior:
 
 \begin{equation*}
 [\bpsi_j|\theta_j,\sigma^2_j] \propto |\sigma^{-2}_j\bW_j|_+^{1/2}\exp\left( -\shalf\sigma^{-2}_j\bpsi_j\bW_j\bpsi_j\right)
@@ -247,7 +272,7 @@ where
 
 
 \begin{frame}
-	\frametitle{Prior distributions for spatial effects}
+	\frametitle{Intrinsic Autoregression Model for Spatial Effects}
 	\begin{itemize}
 
 \item The intrinsic model has an indeterminate overall level.
@@ -260,32 +285,17 @@ where
 
 
 
-\begin{frame}
-	\frametitle{Projected intrinsic autoregression (PIAR) prior}
-
-Special structure of $\bW_j$:
-
-  	\begin{itemize}
-         \item Then the spectral decomposition of $\bW_j$ is given by 
-         $$\bM_j\bW_j\bM_j^\sT = \theta_j\bLambda_{r_j}\otimes\mathbf{I}_{c_j} + \bar\theta_j\mathbf{I}_{r_j}\otimes\bLambda_{c_j}.$$
-         \item where $\bM_j = \bN_{r_j}\otimes\bN_{c_j}$.
-         \item $\bLambda_k$ denote the $k\times k$ diagonal matrix  whose $u$th diagonal entry is $4\sin^2\{\pi(u-1)/(2k)\}.$
-	\item $\bN_k$ denotes the $k\times k$ orthogonal matrix whose $(u,v)$th entry is $1/\sqrt{k}$ if $u=1,$ $\forall v,$ and $(2/k)^{1/2}\cos\{\pi(u-1)(v-1/2)/k\}$ otherwise.
-	\end{itemize}
-	
-\end{frame}
-
 
 \begin{frame}
-	\frametitle{Projected intrinsic autoregression (PIAR) prior}
+	\frametitle{Projected Intrinsic Autoregression (PIAR) Prior}
 
   	\begin{itemize}
 	\item The Gaussian projected intrinsic autoregression (PIAR) on the $r_j \times c_j$ regular array is then defined as:
 	\begin{equation*}
 \bphi_j = \bB_j \bvarphi_j,\qquad \bvarphi_j\sim{\mathcal N}(\mathbf{0},\bD_j^{-1}),
 \end{equation*}
-\item  $\bB_{j}^{\sT}$ denotes the $(r_jc_j-1)\times r_jc_j$ matrix consisting of last $r_jc_j-1$ rows of $\bM_j$.
-\item $\bD_j$ denotes the diagonal matrix consisting of the nonzero eigenvalues of $\bW_j$.
+\item  $\bB_{j}$ is an $r_jc_j \times (r_jc_j-1)$ matrix.
+\item $\bD_j$ is an $(r_jc_j-1) \times (r_jc_j-1)$ diagonal matrix. 
 	\end{itemize}
 	
 \end{frame}
@@ -293,16 +303,36 @@ Special structure of $\bW_j$:
 
 
 
+
 \begin{frame}
-	\frametitle{Matrix free computation}
+	\frametitle{Projected Intrinsic Autoregression (PIAR) Prior}
+
+  	\begin{itemize}
+         \item Then the spectral decomposition of $\bW_j$ is given by:
+         $$( \bN_{r_j}\otimes\bN_{c_j}) \bW_j ( \bN_{r_j}^\sT \otimes\bN_{c_j}^\sT) = \theta_j\bLambda_{r_j}\otimes\mathbf{I}_{c_j} + \bar\theta_j\mathbf{I}_{r_j}\otimes\bLambda_{c_j}.$$
+         \item $\bLambda_k$ denote the $k\times k$ diagonal matrix  whose $u$th diagonal entry is $4\sin^2\{\pi(u-1)/(2k)\}.$
+	\item $\bN_k$ denotes the $k\times k$ orthogonal matrix whose $(u,v)$th entry is $1/\sqrt{k}$ if $u=1,$ $\forall v,$ and $(2/k)^{1/2}\cos\{\pi(u-1)(v-1/2)/k\}$ otherwise.
+	\item  $\bB_{j}^{\sT}$ denotes the $(r_jc_j-1)\times r_jc_j$ matrix consisting of last $r_jc_j-1$ rows of $ \bN_{r_j}\otimes\bN_{c_j}$.
+         \item $\bD_j$ denotes the diagonal matrix consisting of the nonzero elements of $\theta_j\bLambda_{r_j}\otimes\mathbf{I}_{c_j} + \bar\theta_j\mathbf{I}_{r_j}\otimes\bLambda_{c_j}$.
+	\end{itemize}
+	
+\end{frame}
+
+
+
+
+
+
+
+\begin{frame}
+	\frametitle{Matrix Free Computation}
 	
 	\begin{itemize}
-	\item  The covariance matrix of the Gaussian PIAR is a dense singular matrix.
+	\item  The covariance matrix of the Gaussian PIAR is a \textbf{dense} singular matrix.
 	\item The computation load for generating $\bphi_j$ from PIAR using knowledge of multivariate statistics is ${\mathcal O}((r_jc_j)^3/3)$.
-	\item Assume small number of missing plots (denote $M_j$ as the number of missing plots).
-)
-	\item Thus matrix-vector multiplications with $\bB_j$ and $\bB^{\sT}_j$ can also be performed using these discrete cosine transformations (DCT).
-	\item The computation load of matrix free computation algorithm is $\mathcal{O}( r_j c_j M_j \log r_jc_j +  M_j^3/3)$.	\end{itemize}
+	\item Assume \textbf{small number of missing plots} (denote $r_j c_j-N_j$ as the number of missing plots).
+	\item Thus matrix-vector multiplications with $\bB_j$ and $\bB^{\sT}_j$ can also be performed using these \textbf{discrete cosine transformations (DCT)}.
+	\item The computation load of our proposed algorithm is $\mathcal{O}( r_jc_j + (r_j c_j-N_j) r_j c_j \log r_jc_j +  (r_j c_j-N_j)^3/3)$.	\end{itemize}
 	
 \end{frame}
 
@@ -314,10 +344,11 @@ Special structure of $\bW_j$:
 	\frametitle{Within-fields prediction}
 	
 	\begin{itemize}
-	\item Given grain yields values for some plots in fields, predict the yields for the rest plots.
-	\item Implement posterior predictive distributions.
+	\item Predict yield for plots in a field using information from other plots in the same field.
+	\item Implement \textbf{posterior predictive distributions}.
 	\item Important to account for the spatial correlation between plots.
-	\item Kinship information plays a decisive role when there are new crop varieties in the testing sets.
+	\item Kinship information plays a decisive role for an accurate prediction.
+	\item Mainly used for \textbf{model evaluation}.
 	\end{itemize}
 	
 \end{frame}
@@ -325,18 +356,7 @@ Special structure of $\bW_j$:
 
 
 \begin{frame}
-	\frametitle{Within-fields prediction}
-	50 Plot Yield Prediction Intervals ($95\%$ Credible Level).
-	\begin{figure}[H]
-		\centering
-		\includegraphics[width = 0.75\textwidth]{true_vs_predint.pdf}
-	\end{figure}
-\end{frame}
-
-
-
-\begin{frame}
-	\frametitle{Within-fields prediction}
+	\frametitle{Model Evaluation via Prediction}
 	Reduced error for yield prediction.
 	\begin{figure}[H]
 		\centering
@@ -347,7 +367,7 @@ Special structure of $\bW_j$:
 
 
 \begin{frame}
-	\frametitle{Within-fields prediction}
+	\frametitle{Model Evaluation via Prediction}
 Level of spatial correlation vs performance of SFW model.
 
 	\begin{figure}[H]
@@ -357,14 +377,23 @@ Level of spatial correlation vs performance of SFW model.
 \end{frame}
 
 
+\begin{frame}
+	\frametitle{Prediction Intervals}
+	50 plot yield prediction intervals ($95\%$ credible level).
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width = 0.75\textwidth]{true_vs_predint.pdf}
+	\end{figure}
+\end{frame}
+
 
 \begin{frame}
-	\frametitle{Out-of-fields prediction}
+	\frametitle{Predict in New Environments}
 	
 	\begin{itemize}
-	\item Predict the grain yields in new fields.
 	\item Need to learn how field effects depend on the weather and soil variables.
-	\item More field trials and environmental data will lead to a more accurate and robust prediction.
+	\item The better we explain the environment effects using environmental covariates, the higher prediction accuracy we will gain.
+	\item Collecting more elaborate field and weather variables will lead to a more accurate and robust prediction.
 	\end{itemize}
 	
 \end{frame}
@@ -372,7 +401,7 @@ Level of spatial correlation vs performance of SFW model.
 
 
 \begin{frame}
-	\frametitle{Out-of-fields prediction}
+	\frametitle{Predict in New Environments}
 	Location-wise RMSPEs computed using temperature and rainfall data (x-axis), versus the location-wise RMSPEs computed not using any environment information (y-axis). 
 	\begin{figure}[H]
 		\centering
@@ -424,10 +453,22 @@ Level of spatial correlation vs performance of SFW model.
 
 
 \begin{frame}
-\frametitle{References}
+\frametitle{Selected References}
 \bibliographystyle{apalike}
 \bibliography{FWspatial}
 \end{frame}
+
+
+
+\begin{frame}
+\frametitle{Acknowledgements}
+The authors acknowledge financial support of Iowa State University Plant Sciences Institute Scholars Program, the Baker Center for Bioinformatics and Biological Statistics, and the Iowa Agriculture and Home Economics Experiment Station, Ames, Iowa, Project No. IOW03617, which is supported by USDA/NIFA and State of Iowa funds. 
+
+
+Any opinions, findings, conclusions, or recommendations expressed in this publication are those of the authors and do not necessarily reflect the views of the U.S. Department of Agriculture.
+\end{frame}
+
+
 
 
 \begin{frame}%%     1
