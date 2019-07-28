@@ -160,6 +160,7 @@
 
 
 \begin{document}
+\renewcommand{\inserttotalframenumber}{18}
 \begin{frame}
 \titlepage
 \end{frame}
@@ -172,7 +173,7 @@
 
 
 \begin{frame}
-	\frametitle{The Genomes To Fields (G2F) Initiative}
+	\frametitle{The Genomes to Fields (G2F) Initiative}
 	\begin{figure}[H]
 		\centering
 		\includegraphics[width = 0.65\textwidth]{g2f_demo.png}
@@ -198,25 +199,18 @@
 \begin{frame}
 	\frametitle{Finlay-Wilkinson (FW) Model}
 	\begin{itemize}
-	\item FW model \citep{finlay1963analysis}: 
+	\item Finlay-Wilkinson (FW) model \citep{finlay1963analysis}: 
 	$$y_{ijk} = \mu + g_i + h_j + b_i h_j + e_{ijk},$$
-	\item A model for characterizing genotype-by-environment interaction.
- \item For genotype $i$:
- $$y_{ijk} = (\mu + g_i) +  (b_i + 1) h_j + e_{ijk},$$
- FW model becomes a linear model with intercept $\mu + g_i$ and slope $b_i + 1 $.
+ \item For genotype $i$, FW model becomes a \textbf{linear model} with intercept $\mu + g_i$ and slope $b_i + 1 $.
 	\end{itemize}		
-\end{frame}
-
-
-
-\begin{frame}
-\frametitle{Finlay-Wilkinson (FW) Model}
-This plot gives one example of the fitted FW model (using G2F data). Each line represents the linear relationship between grain yield and location effect for one genotype.
-	\begin{figure}[H]
+	\pause
+		\begin{figure}[H]
 		\centering
-		\includegraphics[width = 0.65\textwidth]{image8.png}
+		\includegraphics[width = 0.5\textwidth]{image8.png}
 	\end{figure}
 \end{frame}
+
+
 
 
 
@@ -243,9 +237,10 @@ This plot gives one example of the fitted FW model (using G2F data). Each line r
 	\item Prior distributions for genotype, slope, and field effects:
 	$$  [\mathbf{g}] \sim \mathcal{N}(\bm{0}, \bA \sigma_g^2); \ \ \ \ [\mathbf{b}] \sim \mathcal{N}(\bm{0}, \bA \sigma_b^2); $$
         $$[\mathbf{h}|\bm{\gamma}] \sim \mathrm{N}( \gamma_1 \bZ_1 + \dots + \gamma_l \bZ_l + \dots + \gamma_L \bZ_L
-         , \mathbf{I} \sigma_h^2)$$
+         , \mathbf{I} \sigma_h^2).$$
+         \item $\bA$ is the kinship matrix describing the correlation structure of $\mathbf{g}$ and $\mathbf{b}$ \textcolor{blue}{(R package/software: rrBLUP, Tassel 5)}.
+	\item $\bZ_{l}$ is the $l$th standardized environmental covariate.
 	\end{itemize}
-	$\bA$ is a known matrix describing the correlation structure of $\mathbf{g}$ and $\mathbf{b}$, $\bZ_{l}$ is the $l$th environment-specific covariate.
 \end{frame}
 
 
@@ -273,11 +268,25 @@ where
 
 \begin{frame}
 	\frametitle{Intrinsic Autoregression Model for Spatial Effects}
-	\begin{itemize}
 
-\item The intrinsic model has an indeterminate overall level.
-\item The overall levels of the field specific spatial effects are completely confounded with the location effects.
-\item Not directly applicable for yield prediction.
+\textcolor{blue}{Recall: } 
+\begin{itemize}
+\item $[y_{ijk} | \mu, \mathbf{g}, \mathbf{b}, \mathbf{h}, \bphi ] \ \ \overset{indep}{\sim} \ \  \mathcal{N}(\mu + g_i + h_j + b_i h_j + \phi_{ijk}, \sigma_e^2), $
+\end{itemize}
+
+\pause
+	
+\textcolor{blue}{Problem: }
+\begin{itemize}
+\item The intrinsic spatial prior has an \textbf{indeterminate overall level}.
+\item The overall levels of \textbf{spatial effects} are \textbf{confounded with} the \textbf{location effects}.
+\item Estimation of $\mathbf{b}$ is biased.
+\item Hierarchical structure of $\mathbf{h}$ is not applicable.
+\end{itemize}
+
+\pause
+\textcolor{blue}{Solution: }
+	\begin{itemize}
 \item  \textbf{A hard constraint}:  set the average of the spatial effects to zero.
 \end{itemize}
  
@@ -304,22 +313,6 @@ where
 
 
 
-\begin{frame}
-	\frametitle{Projected Intrinsic Autoregression (PIAR) Prior}
-
-  	\begin{itemize}
-         \item Then the spectral decomposition of $\bW_j$ is given by:
-         $$( \bN_{r_j}\otimes\bN_{c_j}) \bW_j ( \bN_{r_j}^\sT \otimes\bN_{c_j}^\sT) = \theta_j\bLambda_{r_j}\otimes\mathbf{I}_{c_j} + \bar\theta_j\mathbf{I}_{r_j}\otimes\bLambda_{c_j}.$$
-         \item $\bLambda_k$ denote the $k\times k$ diagonal matrix  whose $u$th diagonal entry is $4\sin^2\{\pi(u-1)/(2k)\}.$
-	\item $\bN_k$ denotes the $k\times k$ orthogonal matrix whose $(u,v)$th entry is $1/\sqrt{k}$ if $u=1,$ $\forall v,$ and $(2/k)^{1/2}\cos\{\pi(u-1)(v-1/2)/k\}$ otherwise.
-	\item  $\bB_{j}^{\sT}$ denotes the $(r_jc_j-1)\times r_jc_j$ matrix consisting of last $r_jc_j-1$ rows of $ \bN_{r_j}\otimes\bN_{c_j}$.
-         \item $\bD_j$ denotes the diagonal matrix consisting of the nonzero elements of $\theta_j\bLambda_{r_j}\otimes\mathbf{I}_{c_j} + \bar\theta_j\mathbf{I}_{r_j}\otimes\bLambda_{c_j}$.
-	\end{itemize}
-	
-\end{frame}
-
-
-
 
 
 
@@ -341,14 +334,23 @@ where
 
 
 \begin{frame}
-	\frametitle{Within-fields prediction}
+	\frametitle{Prediction}
 	
 	\begin{itemize}
-	\item Predict yield for plots in a field using information from other plots in the same field.
 	\item Implement \textbf{posterior predictive distributions}.
+	\item Easy to obtain predictive credible intervals.
+	\end{itemize}
+	\pause
+	\textcolor{blue}{Within-field prediction}:
+	\begin{itemize}
 	\item Important to account for the spatial correlation between plots.
 	\item Kinship information plays a decisive role for an accurate prediction.
 	\item Mainly used for \textbf{model evaluation}.
+	\end{itemize}
+	\pause
+	\textcolor{blue}{Predict in new environments}:
+	\begin{itemize}
+	\item By learning how environment effects depend on the weather and soil variables.
 	\end{itemize}
 	
 \end{frame}
@@ -356,7 +358,7 @@ where
 
 
 \begin{frame}
-	\frametitle{Model Evaluation via Prediction}
+	\frametitle{Model Evaluation via Within-Field Prediction}
 	Reduced error for yield prediction.
 	\begin{figure}[H]
 		\centering
@@ -367,7 +369,7 @@ where
 
 
 \begin{frame}
-	\frametitle{Model Evaluation via Prediction}
+	\frametitle{Model Evaluation via Within-Field Prediction}
 Level of spatial correlation vs performance of SFW model.
 
 	\begin{figure}[H]
@@ -387,17 +389,6 @@ Level of spatial correlation vs performance of SFW model.
 \end{frame}
 
 
-\begin{frame}
-	\frametitle{Predict in New Environments}
-	
-	\begin{itemize}
-	\item Need to learn how field effects depend on the weather and soil variables.
-	\item The better we explain the environment effects using environmental covariates, the higher prediction accuracy we will gain.
-	\item Collecting more elaborate field and weather variables will lead to a more accurate and robust prediction.
-	\end{itemize}
-	
-\end{frame}
-
 
 
 \begin{frame}
@@ -409,6 +400,56 @@ Level of spatial correlation vs performance of SFW model.
 	\end{figure}
 	
 \end{frame}
+
+
+
+
+
+
+
+\begin{frame}
+\frametitle{Selected References}
+\bibliographystyle{apalike}
+\bibliography{FWspatial}
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{Acknowledgements}
+The authors acknowledge financial support of Iowa State University Plant Sciences Institute Scholars Program, the Baker Center for Bioinformatics and Biological Statistics, and the Iowa Agriculture and Home Economics Experiment Station, Ames, Iowa, Project No. IOW03617, which is supported by USDA/NIFA and State of Iowa funds. 
+
+
+Any opinions, findings, conclusions, or recommendations expressed in this publication are those of the authors and do not necessarily reflect the views of the U.S. Department of Agriculture.
+\end{frame}
+
+
+
+
+\begin{frame}%%     1
+\begin{center}
+\Huge Thank You!
+\end{center}
+\end{frame}
+
+
+
+
+\begin{frame}
+	\frametitle{Construction of $\bB_{j}$ and $\bD_j$}
+
+  	\begin{itemize}
+         \item Then the spectral decomposition of $\bW_j$ is given by:
+         $$( \bN_{r_j}\otimes\bN_{c_j}) \bW_j ( \bN_{r_j}^\sT \otimes\bN_{c_j}^\sT) = \theta_j\bLambda_{r_j}\otimes\mathbf{I}_{c_j} + \bar\theta_j\mathbf{I}_{r_j}\otimes\bLambda_{c_j}.$$
+         \item $\bLambda_k$ denote the $k\times k$ diagonal matrix  whose $u$th diagonal entry is $4\sin^2\{\pi(u-1)/(2k)\}.$
+	\item $\bN_k$ denotes the $k\times k$ orthogonal matrix whose $(u,v)$th entry is $1/\sqrt{k}$ if $u=1,$ $\forall v,$ and $(2/k)^{1/2}\cos\{\pi(u-1)(v-1/2)/k\}$ otherwise.
+	\item  $\bB_{j}^{\sT}$ denotes the $(r_jc_j-1)\times r_jc_j$ matrix consisting of last $r_jc_j-1$ rows of $ \bN_{r_j}\otimes\bN_{c_j}$.
+         \item $\bD_j$ denotes the diagonal matrix consisting of the nonzero elements of $\theta_j\bLambda_{r_j}\otimes\mathbf{I}_{c_j} + \bar\theta_j\mathbf{I}_{r_j}\otimes\bLambda_{c_j}$.
+	\end{itemize}
+	
+\end{frame}
+
+
 
 
 \begin{frame}
@@ -448,42 +489,6 @@ Level of spatial correlation vs performance of SFW model.
 
 
 \end{frame}
-
-
-
-
-\begin{frame}
-\frametitle{Selected References}
-\bibliographystyle{apalike}
-\bibliography{FWspatial}
-\end{frame}
-
-
-
-\begin{frame}
-\frametitle{Acknowledgements}
-The authors acknowledge financial support of Iowa State University Plant Sciences Institute Scholars Program, the Baker Center for Bioinformatics and Biological Statistics, and the Iowa Agriculture and Home Economics Experiment Station, Ames, Iowa, Project No. IOW03617, which is supported by USDA/NIFA and State of Iowa funds. 
-
-
-Any opinions, findings, conclusions, or recommendations expressed in this publication are those of the authors and do not necessarily reflect the views of the U.S. Department of Agriculture.
-\end{frame}
-
-
-
-
-\begin{frame}%%     1
-\begin{center}
-\Huge Thank You!
-\end{center}
-\end{frame}
-
-
-
-
-
-
-
-
 
 
 
