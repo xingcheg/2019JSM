@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.7.16)  27 JUL 2019 23:13
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.7.16)  27 JUL 2019 23:24
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1330,7 +1330,7 @@ LaTeX Font Info:    Font shape `U/lasy/b/n' in size <6> not available
 File: com_pred3.pdf Graphic file (type pdf)
 
 <use com_pred3.pdf>
-Package pdftex.def Info: com_pred3.pdf used on input line 367.
+Package pdftex.def Info: com_pred3.pdf used on input line 368.
 (pdftex.def)             Requested size: 308.06367pt x 190.32243pt.
  [17
 
@@ -1338,7 +1338,7 @@ Package pdftex.def Info: com_pred3.pdf used on input line 367.
 <morans_i.pdf, id=506, 528.97626pt x 366.36874pt>
 File: morans_i.pdf Graphic file (type pdf)
  <use morans_i.pdf>
-Package pdftex.def Info: morans_i.pdf used on input line 379.
+Package pdftex.def Info: morans_i.pdf used on input line 380.
 (pdftex.def)             Requested size: 273.83728pt x 189.65752pt.
  [18
 
@@ -1346,10 +1346,10 @@ Package pdftex.def Info: morans_i.pdf used on input line 379.
 File: true_vs_predint.pdf Graphic file (type pdf)
 
 <use true_vs_predint.pdf>
-Package pdftex.def Info: true_vs_predint.pdf used on input line 389.
+Package pdftex.def Info: true_vs_predint.pdf used on input line 390.
 (pdftex.def)             Requested size: 256.72147pt x 204.43192pt.
 
-Overfull \vbox (3.69882pt too high) detected at line 389
+Overfull \vbox (3.69882pt too high) detected at line 390
  []
 
 [19
@@ -1358,10 +1358,10 @@ Overfull \vbox (3.69882pt too high) detected at line 389
 <type3pred1.pdf, id=571, 631.35875pt x 407.5225pt>
 File: type3pred1.pdf Graphic file (type pdf)
  <use type3pred1.pdf>
-Package pdftex.def Info: type3pred1.pdf used on input line 402.
+Package pdftex.def Info: type3pred1.pdf used on input line 403.
 (pdftex.def)             Requested size: 273.83728pt x 176.75473pt.
 
-Overfull \vbox (3.22165pt too high) detected at line 402
+Overfull \vbox (3.22165pt too high) detected at line 403
  []
 
 [20
@@ -1378,31 +1378,31 @@ Overfull \vbox (3.22165pt too high) detected at line 402
 <fwpair_1.pdf, id=715, 521.95pt x 399.4925pt>
 File: fwpair_1.pdf Graphic file (type pdf)
  <use fwpair_1.pdf>
-Package pdftex.def Info: fwpair_1.pdf used on input line 491.
+Package pdftex.def Info: fwpair_1.pdf used on input line 492.
 (pdftex.def)             Requested size: 92.42003pt x 70.73515pt.
 
 <fwpair_2.pdf, id=716, 521.95pt x 399.4925pt>
 File: fwpair_2.pdf Graphic file (type pdf)
  <use fwpair_2.pdf>
-Package pdftex.def Info: fwpair_2.pdf used on input line 491.
+Package pdftex.def Info: fwpair_2.pdf used on input line 492.
 (pdftex.def)             Requested size: 92.42003pt x 70.73515pt.
 
 <fwpair_3.pdf, id=717, 521.95pt x 399.4925pt>
 File: fwpair_3.pdf Graphic file (type pdf)
  <use fwpair_3.pdf>
-Package pdftex.def Info: fwpair_3.pdf used on input line 491.
+Package pdftex.def Info: fwpair_3.pdf used on input line 492.
 (pdftex.def)             Requested size: 92.42003pt x 70.73515pt.
 
 <fwpair_4.pdf, id=718, 521.95pt x 399.4925pt>
 File: fwpair_4.pdf Graphic file (type pdf)
  <use fwpair_4.pdf>
-Package pdftex.def Info: fwpair_4.pdf used on input line 491.
+Package pdftex.def Info: fwpair_4.pdf used on input line 492.
 (pdftex.def)             Requested size: 92.42003pt x 70.73515pt.
 
 <fwpair_5.pdf, id=719, 521.95pt x 399.4925pt>
 File: fwpair_5.pdf Graphic file (type pdf)
  <use fwpair_5.pdf>
-Package pdftex.def Info: fwpair_5.pdf used on input line 491.
+Package pdftex.def Info: fwpair_5.pdf used on input line 492.
 (pdftex.def)             Requested size: 92.42003pt x 70.73515pt.
  [25
 
@@ -1417,12 +1417,12 @@ Package pdftex.def Info: fwpair_5.pdf used on input line 491.
 \tf@snm=\write9
 \openout9 = `jsm_2019_xingche.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 499.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 499.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 500.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 500.
 
 (./jsm_2019_xingche.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 499.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 499.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 500.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 500.
 Package rerunfilecheck Info: File `jsm_2019_xingche.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
 
@@ -1430,7 +1430,7 @@ Package rerunfilecheck Info: File `jsm_2019_xingche.out' has not changed.
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 1.0pt have occurred.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 499.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 500.
  ) 
 Here is how much of TeX's memory you used:
  20372 strings out of 493014
@@ -1457,7 +1457,7 @@ texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi8.pfb></usr/local/t
 exlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/te
 xlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texl
 ive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on jsm_2019_xingche.pdf (25 pages, 439924 bytes).
+Output written on jsm_2019_xingche.pdf (25 pages, 440008 bytes).
 PDF statistics:
  854 PDF objects out of 1000 (max. 8388607)
  767 compressed objects within 8 object streams
