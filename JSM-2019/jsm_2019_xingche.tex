@@ -252,12 +252,12 @@
 \item First order Intrinsic Autoregressive prior:
 
 \begin{equation*}
-[\bpsi_j|\theta_j,\sigma^2_j] \propto |\sigma^{-2}_j\bW_j|_+^{1/2}\exp\left( -\shalf\sigma^{-2}_j\bpsi_j\bW_j\bpsi_j\right)
+[\bpsi_j|\theta_j,\sigma^2_j] \propto |\sigma^{-2}_j\bW_j|_+^{1/2}\exp\left( -\shalf\sigma^{-2}_j\bpsi_j^\sT \bW_j\bpsi_j\right)
 \end{equation*}
 where
-\[\bpsi_j\bW_j\bpsi_j = \theta_j\sum\sum(\psi_{u,v} - \psi_{u-1,v})^2 + {\bar\theta}_j\sum\sum(\psi_{u,v} - \psi_{u,v-1})^2\]
+\[\bpsi_j^\sT \bW_j\bpsi_j = \theta_j\sum\sum(\psi_{u,v} - \psi_{u-1,v})^2 + {\bar\theta}_j\sum\sum(\psi_{u,v} - \psi_{u,v-1})^2\]
 
-\item  The distribution of $\pmb{\psi}_j$ is \textbf{invariant} to the addition of arbitrary constant.
+\item  The distribution of $\pmb{\psi}_j$ is \textbf{invariant} to the addition of $c \bm{1}$.
 
 	\end{itemize}
 
