@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.7.16)  28 JUL 2019 22:01
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.7.16)  30 JUL 2019 23:58
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1273,39 +1273,30 @@ File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 ] <image8.png, id=113, 663.47874pt x 572.1375pt>
 File: image8.png Graphic file (type png)
  <use image8.png>
-Package pdftex.def Info: image8.png used on input line 211.
+Package pdftex.def Info: image8.png used on input line 210.
 (pdftex.def)             Requested size: 171.14764pt x 147.5824pt.
 
-Overfull \vbox (7.041pt too high) detected at line 211
+Overfull \vbox (7.041pt too high) detected at line 210
  []
 
 [4
 
- <./image8.png>]
-File: image8.png Graphic file (type png)
- <use image8.png>
-Package pdftex.def Info: image8.png used on input line 211.
-(pdftex.def)             Requested size: 171.14764pt x 147.5824pt.
-
-Overfull \vbox (7.041pt too high) detected at line 211
- []
-
-[5
-
-] <resid_plot_2.pdf, id=171, 739.76375pt x 366.36874pt>
+ <./image8.png>] <resid_plot_2.pdf, id=145, 739.76375pt x 366.36874pt>
 File: resid_plot_2.pdf Graphic file (type pdf)
 
 <use resid_plot_2.pdf>
-Package pdftex.def Info: resid_plot_2.pdf used on input line 225.
+Package pdftex.def Info: resid_plot_2.pdf used on input line 224.
 (pdftex.def)             Requested size: 311.48997pt x 154.26514pt.
- [6
+ [5
 
  <./resid_plot_2.pdf>]
 LaTeX Font Info:    Font shape `U/lasy/b/n' in size <8> not available
-(Font)              Font shape `U/lasy/m/n' tried instead on input line 244.
+(Font)              Font shape `U/lasy/m/n' tried instead on input line 243.
 LaTeX Font Info:    Font shape `U/lasy/b/n' in size <6> not available
-(Font)              Font shape `U/lasy/m/n' tried instead on input line 244.
- [7
+(Font)              Font shape `U/lasy/m/n' tried instead on input line 243.
+ [6
+
+] [7
 
 ] [8
 
@@ -1315,58 +1306,58 @@ LaTeX Font Info:    Font shape `U/lasy/b/n' in size <6> not available
 
 ] [11
 
-] [12
-
 ]
-[13
+[12
+
+] [13
 
 ] [14
 
 ] [15
 
-] [16
-
-] <com_pred3.pdf, id=474, 732.7375pt x 452.69125pt>
+] <com_pred3.pdf, id=447, 732.7375pt x 452.69125pt>
 File: com_pred3.pdf Graphic file (type pdf)
 
 <use com_pred3.pdf>
-Package pdftex.def Info: com_pred3.pdf used on input line 368.
+Package pdftex.def Info: com_pred3.pdf used on input line 367.
 (pdftex.def)             Requested size: 308.06367pt x 190.32243pt.
- [17
+ [16
 
  <./com_pred3.pdf>]
-<morans_i.pdf, id=506, 528.97626pt x 366.36874pt>
+<morans_i.pdf, id=480, 528.97626pt x 366.36874pt>
 File: morans_i.pdf Graphic file (type pdf)
  <use morans_i.pdf>
-Package pdftex.def Info: morans_i.pdf used on input line 380.
+Package pdftex.def Info: morans_i.pdf used on input line 379.
 (pdftex.def)             Requested size: 273.83728pt x 189.65752pt.
- [18
+ [17
 
- <./morans_i.pdf>] <true_vs_predint.pdf, id=538, 542.025pt x 431.6125pt>
+ <./morans_i.pdf>] <true_vs_predint.pdf, id=512, 542.025pt x 431.6125pt>
 File: true_vs_predint.pdf Graphic file (type pdf)
 
 <use true_vs_predint.pdf>
-Package pdftex.def Info: true_vs_predint.pdf used on input line 390.
+Package pdftex.def Info: true_vs_predint.pdf used on input line 389.
 (pdftex.def)             Requested size: 256.72147pt x 204.43192pt.
 
-Overfull \vbox (3.69882pt too high) detected at line 390
+Overfull \vbox (3.69882pt too high) detected at line 389
+ []
+
+[18
+
+ <./true_vs_predint.pdf>]
+<type3pred1.pdf, id=544, 631.35875pt x 407.5225pt>
+File: type3pred1.pdf Graphic file (type pdf)
+ <use type3pred1.pdf>
+Package pdftex.def Info: type3pred1.pdf used on input line 402.
+(pdftex.def)             Requested size: 273.83728pt x 176.75473pt.
+
+Overfull \vbox (3.22165pt too high) detected at line 402
  []
 
 [19
 
- <./true_vs_predint.pdf>]
-<type3pred1.pdf, id=571, 631.35875pt x 407.5225pt>
-File: type3pred1.pdf Graphic file (type pdf)
- <use type3pred1.pdf>
-Package pdftex.def Info: type3pred1.pdf used on input line 403.
-(pdftex.def)             Requested size: 273.83728pt x 176.75473pt.
+ <./type3pred1.pdf>] [20
 
-Overfull \vbox (3.22165pt too high) detected at line 403
- []
-
-[20
-
- <./type3pred1.pdf>] (./jsm_2019_xingche.bbl) [21
+] (./jsm_2019_xingche.bbl) [21
 
 ] [22
 
@@ -1378,31 +1369,31 @@ Overfull \vbox (3.22165pt too high) detected at line 403
 <fwpair_1.pdf, id=715, 521.95pt x 399.4925pt>
 File: fwpair_1.pdf Graphic file (type pdf)
  <use fwpair_1.pdf>
-Package pdftex.def Info: fwpair_1.pdf used on input line 492.
+Package pdftex.def Info: fwpair_1.pdf used on input line 510.
 (pdftex.def)             Requested size: 92.42003pt x 70.73515pt.
 
 <fwpair_2.pdf, id=716, 521.95pt x 399.4925pt>
 File: fwpair_2.pdf Graphic file (type pdf)
  <use fwpair_2.pdf>
-Package pdftex.def Info: fwpair_2.pdf used on input line 492.
+Package pdftex.def Info: fwpair_2.pdf used on input line 510.
 (pdftex.def)             Requested size: 92.42003pt x 70.73515pt.
 
 <fwpair_3.pdf, id=717, 521.95pt x 399.4925pt>
 File: fwpair_3.pdf Graphic file (type pdf)
  <use fwpair_3.pdf>
-Package pdftex.def Info: fwpair_3.pdf used on input line 492.
+Package pdftex.def Info: fwpair_3.pdf used on input line 510.
 (pdftex.def)             Requested size: 92.42003pt x 70.73515pt.
 
 <fwpair_4.pdf, id=718, 521.95pt x 399.4925pt>
 File: fwpair_4.pdf Graphic file (type pdf)
  <use fwpair_4.pdf>
-Package pdftex.def Info: fwpair_4.pdf used on input line 492.
+Package pdftex.def Info: fwpair_4.pdf used on input line 510.
 (pdftex.def)             Requested size: 92.42003pt x 70.73515pt.
 
 <fwpair_5.pdf, id=719, 521.95pt x 399.4925pt>
 File: fwpair_5.pdf Graphic file (type pdf)
  <use fwpair_5.pdf>
-Package pdftex.def Info: fwpair_5.pdf used on input line 492.
+Package pdftex.def Info: fwpair_5.pdf used on input line 510.
 (pdftex.def)             Requested size: 92.42003pt x 70.73515pt.
  [25
 
@@ -1417,12 +1408,12 @@ Package pdftex.def Info: fwpair_5.pdf used on input line 492.
 \tf@snm=\write9
 \openout9 = `jsm_2019_xingche.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 500.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 500.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 518.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 518.
 
 (./jsm_2019_xingche.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 500.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 500.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 518.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 518.
 Package rerunfilecheck Info: File `jsm_2019_xingche.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
 
@@ -1430,13 +1421,13 @@ Package rerunfilecheck Info: File `jsm_2019_xingche.out' has not changed.
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 1.0pt have occurred.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 500.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 518.
  ) 
 Here is how much of TeX's memory you used:
- 20372 strings out of 493014
- 382232 string characters out of 6133351
- 450789 words of memory out of 5000000
- 23301 multiletter control sequences out of 15000+600000
+ 20375 strings out of 493014
+ 382251 string characters out of 6133351
+ 450801 words of memory out of 5000000
+ 23304 multiletter control sequences out of 15000+600000
  35614 words of font info for 119 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  56i,16n,57p,396b,643s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1457,7 +1448,7 @@ texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi8.pfb></usr/local/t
 exlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/te
 xlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texl
 ive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on jsm_2019_xingche.pdf (25 pages, 440037 bytes).
+Output written on jsm_2019_xingche.pdf (25 pages, 440121 bytes).
 PDF statistics:
  854 PDF objects out of 1000 (max. 8388607)
  767 compressed objects within 8 object streams

@@ -119,7 +119,7 @@
 \newcommand{\sT}{\mathrm{T}}
 \newcommand{\bZ}{\mathbf{Z}}
 \newcommand{\shalf}{\mbox{{\footnotesize$\frac{1}{2}$}}}
-
+\newcommand{\red}[1]{\textcolor{red}{#1}}
 
 
 \setbeamertemplate{theorems}[numbered]
@@ -160,7 +160,7 @@
 
 
 \begin{document}
-\renewcommand{\inserttotalframenumber}{18}
+\renewcommand{\inserttotalframenumber}{19}
 \begin{frame}
 \titlepage
 \end{frame}
@@ -203,7 +203,6 @@
 	$$y_{ijk} = \mu + g_i + h_j + b_i h_j + e_{ijk},$$
  \item For genotype $i$, FW model becomes a \textbf{linear model} with intercept $\mu + g_i$ and slope $b_i + 1 $.
 	\end{itemize}		
-	\pause
 		\begin{figure}[H]
 		\centering
 		\includegraphics[width = 0.5\textwidth]{image8.png}
@@ -231,7 +230,7 @@
 	\begin{itemize}
 	\item Data model:
 \begin{equation*}
-[y_{ijk} | \mu, \mathbf{g}, \mathbf{b}, \mathbf{h}, \bphi ] \ \ \overset{indep}{\sim} \ \  \mathcal{N}(\mu + g_i + h_j + b_i h_j + \phi_{ijk}, \sigma_e^2),
+[y_{ijk} | \mu, \mathbf{g}, \mathbf{b}, \mathbf{h}, \red{\bphi} ] \ \ \overset{indep}{\sim} \ \  \mathcal{N}(\mu + g_i + h_j + b_i h_j + \red{\phi_{ijk}}, \sigma_e^2),
 \end{equation*}
 
 	\item Prior distributions for genotype, slope, and field effects:
@@ -399,6 +398,25 @@ Level of spatial correlation vs performance of SFW model.
 		\centering
 		\includegraphics[width = 0.8\textwidth]{type3pred1.pdf}
 	\end{figure}
+	
+\end{frame}
+
+
+
+\begin{frame}
+	\frametitle{Summary}
+\textcolor{blue}{Our contribution:}
+	\begin{itemize}
+	\item Proposed a unified framework for high-dimensional GxE analysis by integrating genomic, environmental, and within-field spatial information.
+	\item Proposed PIAR prior and its fast computation algorithm in MCMC for multi-environment trials analysis.
+	\item Allow us to predict the yield of a (possibly novel) corn variety in a (possibly new) environment.
+	\end{itemize}
+	
+\textcolor{blue}{What's next:}
+		\begin{itemize}
+	\item More complex model for environmental covariates.
+	\item Extend to generalized HSFW model.
+	\end{itemize}
 	
 \end{frame}
 
